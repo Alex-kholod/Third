@@ -32,6 +32,6 @@ int main()
 		}
 	}
 	cout << endl;
-	print(m);
+	m.print(m);
 	cout << max << endl;
 }

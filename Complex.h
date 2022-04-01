@@ -11,12 +11,12 @@ struct Complex
 {
 	double re = 0;
 	double im = 0;
-	void sum(Complex a);
-	void difference(Complex a);
-	void multiplication(Complex a);
-	void division(Complex a);
+	Complex sum(Complex a);
+	Complex difference(Complex a);
+	Complex multiplication(Complex a);
+	Complex division(Complex a);
+	Complex print(Complex a);
 };
-void print(Complex a);
 void Print(double x,double y);
 double absolute(Complex a);
 Complex str(string a);

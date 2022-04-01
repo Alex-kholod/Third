@@ -1,3 +1,7 @@
-﻿  main.cpp
+﻿  Complex.cpp
+C:\Users\Alex\source\repos\First\First\Complex.cpp(60,20): warning C4018: <: несоответствие типов со знаком и без знака
+  main.cpp
 C:\Users\Alex\source\repos\First\First\main.cpp(26,20): warning C4018: <: несоответствие типов со знаком и без знака
-  First.vcxproj -> C:\Users\Alex\source\repos\First\Debug\Complex.exe
+  Создание кода...
+C:\Users\Alex\source\repos\First\First\Complex.cpp(36): error C4716: Complex::division: должна возвращать значение
+C:\Users\Alex\source\repos\First\First\Complex.cpp(50): error C4716: Complex::print: должна возвращать значение

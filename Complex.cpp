@@ -1,30 +1,38 @@
 ﻿#include "Complex.h"
 
-void Complex::sum(Complex a)
+Complex Complex::sum(Complex a)
 {
 	double x = this->re + a.re;
 	double y = this->im + a.im;
-	Print(x,y);
+	Complex d{ x, y };
+	return d;
+	//Print(x,y);
 }
-void Complex::difference(Complex a)
+Complex Complex::difference(Complex a)
 {
 	double x = this->re - a.re;
 	double y = this->im - a.im;
-	Print(x, y);
+	Complex d{ x, y };
+	return d;
+	//Print(x, y);
 }
 
-void Complex::multiplication(Complex a)
+Complex Complex::multiplication(Complex a)
 {
 	double x = this->re * a.re - this->im * a.im;
 	double y = this->re * a.im + this->im * a.re;
-	Print(x, y);
+	Complex d{ x, y };
+	return d;
+	//Print(x, y);
 }
 
-void Complex::division(Complex a)
+Complex Complex::division(Complex a)
 {
 	double x = this->re* a.re - this->re * a.im + a.re * this->im + this->im * a.im;
 	double y = a.re * a.re - a.re * a.im + a.re * a.im + a.im * a.im;
-	cout << x / y << endl;
+	/*Complex d{ x, y };
+	return d;*/
+	//cout << x / y << endl;
 }
 
 void Print(double x,double y)
@@ -35,7 +43,7 @@ void Print(double x,double y)
 	else cout << x << endl;
 }
 
-void print(Complex a)
+Complex Complex::print(Complex a)
 {
 	if (a.im >= 0) cout << a.re << "+" << a.im << "i" << endl;
 	else cout << a.re << a.im << "i" << endl;
@@ -71,51 +79,3 @@ Complex str(string a)
 	}
 	return c;
 }
-
-//void workwithfile()
-//{
-//	int k = 0;
-//	string  a, g;
-//	bool flag = 0;
-//
-//	ifstream fin("Complex.txt");
-//	getline(fin, a);
-//	for (int i = 0; i < a.length(); i++)
-//	{
-//		if (a[i] != ' ')
-//		{
-//			g = g + a[i];
-//		}
-//		else
-//		{
-//			for (int j = 0; j < g.length(); j++)
-//			{
-//				if ((('0' <= g[j]) && (g[j] <= '9')) || (g[j] == '-') || (g[j] == '.'))
-//				{
-//					if ((g[j] == '-') && (g[0] == '-')) flag = 0;
-//					else flag = 1;
-//
-//					if ((g[j] == '.') && (g[0] != '.')) flag = 0;
-//					else flag = 1;
-//
-//					if ((('0' <= g[j]) && (g[j] <= '9'))) flag = 0;
-//					else flag = 1;
-//				}
-//				else
-//				{
-//					flag = 1;
-//					break;
-//				}
-//			}
-//			if (flag == 0)
-//			{
-//				k++;
-//				cout << k << endl;
-//				//cout << g << endl;
-//			}
-//			g.clear();
-//		}
-//
-//	}
-//	fin.close();
-//}
